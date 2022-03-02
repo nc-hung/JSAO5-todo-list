@@ -10,7 +10,11 @@ function newElement() {
         document.getElementById("myUL").appendChild(liText);
         document.getElementById("myInput").value = "";
     }
-    console.log(li.length);
+    for (let i = 0; i < li.length; i++) {
+        li[i].addEventListener("click", function() {
+            li[i].classList.add("checked");
+        });
+    }
     console.log(xoaThe);
 }
 // checked
